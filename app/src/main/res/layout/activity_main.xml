@@ -37,81 +37,143 @@
                         android:layout_marginBottom="8dp"
                         android:orientation="vertical">
 
-                        <TextView
-                            style="@style/title_text"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="28dp"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal|top"
-                            android:letterSpacing="0.2"
-                            android:text="DASHBOARD"
-                            android:textAllCaps="true"
-                            android:textStyle="bold"
-                            android:textColor="@color/white"
-                            android:textSize="18sp" />
 
-                        <TextView
-                            android:id="@+id/sub_title"
-                            style="@style/title_text"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/title"
+                                style="@style/title_text"
+                                fontPath="fonts/Lato-Bold.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal|top"
+                                android:letterSpacing="0.1"
+                                android:text="DASHBOARD"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/calendar"
+                                android:layout_width="22dp"
+                                android:layout_height="24dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="4dp"
+                                android:src="@mipmap/ic_calendar" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="58dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/date"
+                                style="@style/title_text"
+                                fontPath="fonts/Lato-Regular.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal|top"
+                                android:letterSpacing="0.1"
+                                android:text="30 APRIL 2020"
+                                android:textAllCaps="true"
+                                android:textColor="@color/yellow"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/date_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
-                            android:layout_marginRight="28dp"
-                            android:layout_marginBottom="18sp"
-                            android:gravity="center_horizontal|top"
-                            android:letterSpacing="0.2"
-                            android:text="30 APRIL 2020"
-                            android:textAllCaps="true"
-                            android:textColor="@color/white"
-                            android:textSize="14sp" />
+                            android:layout_marginRight="58dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@mipmap/ic_prev_day" />
+
+                            <TextView
+                                android:id="@+id/sub_title"
+                                style="@style/title_text"
+                                fontPath="fonts/Lato-Regular.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal|top"
+                                android:letterSpacing="0.1"
+                                android:text="SUB TITLE"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@mipmap/ic_next_day" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/login_as"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:gravity="right"-->
-<!--                        android:letterSpacing="0.1"-->
-<!--                        android:layout_marginRight="18sp"-->
-<!--                        android:text="Welcome"-->
-<!--                        android:textSize="18sp"-->
-<!--                        android:textColor="@color/white" />-->
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/login_as"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:gravity="right"-->
+                    <!--                        android:letterSpacing="0.1"-->
+                    <!--                        android:layout_marginRight="18sp"-->
+                    <!--                        android:text="Welcome"-->
+                    <!--                        android:textSize="18sp"-->
+                    <!--                        android:textColor="@color/white" />-->
 
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginBottom="4dp"-->
-<!--                        android:gravity="right"-->
-<!--                        android:orientation="horizontal">-->
+                    <!--                    <LinearLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginBottom="4dp"-->
+                    <!--                        android:gravity="right"-->
+                    <!--                        android:orientation="horizontal">-->
 
-<!--                        <TextView-->
-<!--                            android:id="@+id/date"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:gravity="left"-->
-<!--                            android:letterSpacing="0.1"-->
-<!--                            android:text="MONDAY, 30 DEC 2019"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:visibility="gone"-->
-<!--                            android:textColor="@color/white" />-->
+                    <!--                        <TextView-->
+                    <!--                            android:id="@+id/date"-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:gravity="left"-->
+                    <!--                            android:letterSpacing="0.1"-->
+                    <!--                            android:text="MONDAY, 30 DEC 2019"-->
+                    <!--                            android:textSize="18sp"-->
+                    <!--                            android:textStyle="bold"-->
+                    <!--                            android:visibility="gone"-->
+                    <!--                            android:textColor="@color/white" />-->
 
-<!--                        <TextView-->
-<!--                            android:id="@+id/time"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginRight="18sp"-->
-<!--                            android:gravity="right"-->
-<!--                            android:letterSpacing="0.1"-->
-<!--                            android:text="12:00 PM"-->
-<!--                            android:textSize="18sp"-->
-<!--                            android:textStyle="bold"-->
-<!--                            android:textColor="@color/white" />-->
+                    <!--                        <TextView-->
+                    <!--                            android:id="@+id/time"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_marginRight="18sp"-->
+                    <!--                            android:gravity="right"-->
+                    <!--                            android:letterSpacing="0.1"-->
+                    <!--                            android:text="12:00 PM"-->
+                    <!--                            android:textSize="18sp"-->
+                    <!--                            android:textStyle="bold"-->
+                    <!--                            android:textColor="@color/white" />-->
 
-<!--                    </LinearLayout>-->
+                    <!--                    </LinearLayout>-->
                 </LinearLayout>
 
             </android.support.v7.widget.Toolbar>
@@ -122,10 +184,12 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
-                app:tabMaxWidth="0dp"
+                app:tabTextColor="@color/aluminum"
                 app:tabGravity="fill"
-                app:tabMode="fixed"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+                app:tabMaxWidth="0dp"
+                app:tabIndicatorHeight="4dp"
+                app:tabIndicatorColor="@color/background"
+                app:tabMode="fixed" />
 
         </android.support.design.widget.AppBarLayout>
 
@@ -148,59 +212,59 @@
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/navigation_menu">
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="bottom"-->
-<!--            android:layout_marginLeft="12dp"-->
-<!--            android:layout_marginBottom="18sp"-->
-<!--            android:gravity="bottom"-->
-<!--            android:orientation="vertical">-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_gravity="bottom"-->
+        <!--            android:layout_marginLeft="12dp"-->
+        <!--            android:layout_marginBottom="18sp"-->
+        <!--            android:gravity="bottom"-->
+        <!--            android:orientation="vertical">-->
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:gravity="center_vertical"-->
-<!--                android:orientation="horizontal">-->
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center_vertical"-->
+        <!--                android:orientation="horizontal">-->
 
-<!--                <TextView android:id="@+id/phone_no"-->
-<!--                    style="@style/cell_label"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Tel : 6848 2791"-->
-<!--                    android:textColor="@color/cell_text"-->
-<!--                    android:textSize="14sp" />-->
-
-
-<!--                <ImageView android:id="@+id/phone_icon"-->
-<!--                    android:layout_width="24dp"-->
-<!--                    android:layout_height="24dp"-->
-<!--                    android:layout_marginLeft="32dp"-->
-<!--                    android:src="@mipmap/ic_phone" />-->
-
-<!--            </LinearLayout>-->
+        <!--                <TextView android:id="@+id/phone_no"-->
+        <!--                    style="@style/cell_label"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="Tel : 6848 2791"-->
+        <!--                    android:textColor="@color/cell_text"-->
+        <!--                    android:textSize="14sp" />-->
 
 
-<!--            <TextView-->
-<!--                style="@style/cell_label"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Mon ~ Fri [10:00 AM ~ 7:00 PM]"-->
-<!--                android:textColor="@color/cell_text"-->
-<!--                android:layout_marginTop="18sp"-->
-<!--                android:textSize="14sp" />-->
+        <!--                <ImageView android:id="@+id/phone_icon"-->
+        <!--                    android:layout_width="24dp"-->
+        <!--                    android:layout_height="24dp"-->
+        <!--                    android:layout_marginLeft="32dp"-->
+        <!--                    android:src="@mipmap/ic_phone" />-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/welcome"-->
-<!--                style="@style/cell_label"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="18sp"-->
-<!--                android:text="INFO121 PTE LTD"-->
-<!--                android:textColor="@color/cell_text"-->
-<!--                android:textSize="14sp" />-->
+        <!--            </LinearLayout>-->
 
-<!--        </LinearLayout>-->
+
+        <!--            <TextView-->
+        <!--                style="@style/cell_label"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Mon ~ Fri [10:00 AM ~ 7:00 PM]"-->
+        <!--                android:textColor="@color/cell_text"-->
+        <!--                android:layout_marginTop="18sp"-->
+        <!--                android:textSize="14sp" />-->
+
+        <!--            <TextView-->
+        <!--                android:id="@+id/welcome"-->
+        <!--                style="@style/cell_label"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_marginTop="18sp"-->
+        <!--                android:text="INFO121 PTE LTD"-->
+        <!--                android:textColor="@color/cell_text"-->
+        <!--                android:textSize="14sp" />-->
+
+        <!--        </LinearLayout>-->
 
 
     </android.support.design.widget.NavigationView>

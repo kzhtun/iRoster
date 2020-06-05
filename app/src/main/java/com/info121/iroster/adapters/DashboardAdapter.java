@@ -11,27 +11,31 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.info121.iroster.App;
 import com.info121.iroster.R;
 import com.info121.iroster.activities.JobListActivity;
+import com.info121.iroster.models.Action;
 import com.info121.iroster.models.JobSummary;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SummaryAdapter extends RecyclerView.Adapter<SummaryAdapter.ViewHolder> {
+public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.ViewHolder> {
     private Context mContext;
     List<JobSummary> mListJob;
 
-    public SummaryAdapter(Context mContext, List<JobSummary> mListJob) {
+    public DashboardAdapter(Context mContext, List<JobSummary> mListJob) {
         this.mContext = mContext;
         this.mListJob = mListJob;
     }
 
     @NonNull
     @Override
-    public SummaryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+    public DashboardAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         mContext = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(mContext);
 
@@ -45,16 +49,16 @@ public class SummaryAdapter extends RecyclerView.Adapter<SummaryAdapter.ViewHold
 
         final int sdk = android.os.Build.VERSION.SDK_INT;
 
-        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+        if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 
-            switch (mListJob.get(i).getSector()){
-                case "NORTH" :
+            switch (mListJob.get(i).getSector()) {
+                case "NORTH":
                     viewHolder.mainLayout.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.rounded_layout_north));
                     break;
-                case "WEST" :
+                case "WEST":
                     viewHolder.mainLayout.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.rounded_layout_west));
                     break;
-                case "EAST" :
+                case "EAST":
                     viewHolder.mainLayout.setBackgroundDrawable(ContextCompat.getDrawable(mContext, R.drawable.rounded_layout_east));
                     break;
                 case "CENTRAL":
@@ -66,14 +70,14 @@ public class SummaryAdapter extends RecyclerView.Adapter<SummaryAdapter.ViewHold
 
         } else {
 
-            switch (mListJob.get(i).getSector()){
-                case "NORTH" :
+            switch (mListJob.get(i).getSector()) {
+                case "NORTH":
                     viewHolder.mainLayout.setBackground(ContextCompat.getDrawable(mContext, R.drawable.rounded_layout_north));
                     break;
-                case "WEST" :
+                case "WEST":
                     viewHolder.mainLayout.setBackground(ContextCompat.getDrawable(mContext, R.drawable.rounded_layout_west));
                     break;
-                case "EAST" :
+                case "EAST":
                     viewHolder.mainLayout.setBackground(ContextCompat.getDrawable(mContext, R.drawable.rounded_layout_east));
                     break;
                 case "CENTRAL":
@@ -81,22 +85,25 @@ public class SummaryAdapter extends RecyclerView.Adapter<SummaryAdapter.ViewHold
                     break;
 
             }
-
         }
-
-
 
         viewHolder.sector.setText(mListJob.get(i).getSector());
         viewHolder.count.setText(mListJob.get(i).getCount());
 
+        final int index = i;
         viewHolder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mContext, JobListActivity.class);
-                intent.putExtra("SECTOR", viewHolder.sector.getText());
+                Action action = new Action("JOBLIST", "REGIONS (" + mListJob.get(index).getShift() + ")", viewHolder.sector.getText().toString());
+                App.currentShift = mListJob.get(index).getShift();
+                App.currentShortage = mListJob.get(index).getCount();
 
-                mContext.startActivity(intent);
+                if (mListJob.get(index).getShift().equalsIgnoreCase("DAY"))
+                    App.currentShortage = "-4";
+                else
+                    App.currentShortage = "-3";
 
+                EventBus.getDefault().post(action);
             }
         });
     }

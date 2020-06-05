@@ -29,32 +29,38 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/site_id"
-                    style="@style/cell_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="CONTRACT"
-                    android:textColor="@color/orange" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/site_name"
                     style="@style/cell_text"
+                    fontPath="fonts/Lato-Bold.ttf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="THE NORTH STAR"
+                    android:letterSpacing="0.1"
+                    android:text="Site Name"
                     android:textColor="@color/dark_blue"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/contract"
+                    style="@style/cell_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:text="contract"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -71,20 +77,22 @@
                         android:textColor="@color/jumbo" />
 
                     <TextView
-                        android:id="@+id/job_type"
+                        android:id="@+id/cluster"
                         style="@style/cell_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="NORTH"
-                        android:textColor="@color/dark_blue" />
+                        android:text="SHIFT 1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
+
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:orientation="vertical">
 
                     <TextView
@@ -95,21 +103,23 @@
                         android:textColor="@color/jumbo" />
 
                     <TextView
-                        android:id="@+id/job_type"
+                        android:id="@+id/requirement"
                         style="@style/cell_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="SO"
-                        android:textColor="@color/dark_blue" />
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -126,29 +136,31 @@
                         android:textColor="@color/jumbo" />
 
                     <TextView
-                        android:id="@+id/job_type"
+                        android:id="@+id/day"
                         style="@style/cell_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="SHIFT 1 (08:00~20:00)"
-                        android:textColor="@color/dark_blue" />
+                        android:text="officer"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13sp" />
 
                     <TextView
-                        android:id="@+id/job_type"
+                        android:id="@+id/day_desc"
                         style="@style/cell_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="1SS, 4SSO"
-                        android:textColor="@color/orange" />
+                        android:text="officer"
+                        android:textColor="@color/orange"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:orientation="vertical">
 
                     <TextView
@@ -159,30 +171,35 @@
                         android:textColor="@color/jumbo" />
 
                     <TextView
-                        android:id="@+id/job_type"
+                        android:id="@+id/others"
                         style="@style/cell_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="DAY SHIFT"
-                        android:textColor="@color/dark_blue" />
+                        android:text="PENDING"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
 
                     <TextView
-                        android:id="@+id/job_type"
+                        android:id="@+id/others_desc"
                         style="@style/cell_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="RTT"
-                        android:textColor="@color/orange" />
+                        android:text="officer"
+                        android:textColor="@color/orange"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
+
+
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -195,31 +212,50 @@
                         style="@style/cell_label"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DAY SHOTAGE"
+                        android:text="DAY SHORTAGE"
                         android:textColor="@color/jumbo" />
 
-
                     <TextView
-                        android:id="@+id/job_type"
+                        android:id="@+id/day_shortage"
                         style="@style/cell_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="-1"
-                        android:textColor="@color/orange" />
+                        android:text="officer"
+                        android:textColor="@color/orange"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:orientation="vertical">
+
+                    <TextView
+                        style="@style/cell_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OTHERS SHORTAGE"
+                        android:textColor="@color/jumbo" />
+
+                    <TextView
+                        android:id="@+id/others_shortage"
+                        style="@style/cell_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="PENDING"
+                        android:textColor="@color/orange"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
-            </LinearLayout>
 
+
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -454,8 +490,6 @@
                     android:layout_marginRight="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_button_green"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="16dp"
                     android:text="UPDATE"
                     android:textColor="@color/white" />
 
@@ -467,8 +501,6 @@
                     android:layout_marginLeft="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_button_red"
-                    android:paddingLeft="32dp"
-                    android:paddingRight="16dp"
                     android:text="CLOSE"
                     android:textColor="@color/white" />
             </LinearLayout>

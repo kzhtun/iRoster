@@ -1,19 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:id="@+id/group_0" android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:checked="false"
+            android:icon="@mipmap/m_job_list"
+            android:title="Dashboard" >
+        </item>
+
+        <item
+            android:id="@+id/north"
+            android:checked="false"
+            android:icon="@mipmap/m_north"
+            android:title="&#160;&#160;&#160;&#160;&#160; - North" >
+        </item>
+
+        <item
+            android:id="@+id/west"
+            android:checked="false"
+            android:icon="@mipmap/m_west"
+            android:title="&#160;&#160;&#160;&#160;&#160; - West" >
+        </item>
+
+        <item
+            android:id="@+id/east"
+            android:checked="false"
+            android:icon="@mipmap/m_east"
+            android:title="&#160;&#160;&#160;&#160;&#160; - East" >
+        </item>
+
+        <item
+            android:id="@+id/central"
+            android:checked="false"
+            android:icon="@mipmap/m_central"
+            android:title="&#160;&#160;&#160;&#160;&#160; - Central" >
+        </item>
+    </group>
+
     <group android:id="@+id/group_1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/notificaiton"
+            android:checked="false"
+            android:icon="@mipmap/m_notification"
+            android:title="Notification" />
 
         <item
             android:id="@+id/profile"
             android:checked="false"
-            android:icon="@mipmap/ic_profile1"
+            android:icon="@mipmap/m_profile"
             android:title="Profile" />
-        <item
-            android:id="@+id/open_close"
-            android:checked="false"
-            android:icon="@mipmap/ic_open_close"
-            android:title="Store Opening/ Closing" />
 
+        <item
+            android:id="@+id/logout"
+            android:checked="false"
+            android:icon="@mipmap/m_logout"
+            android:title="Logout" />
 
 
     </group>

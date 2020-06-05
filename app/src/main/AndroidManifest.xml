@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.JobDetailActivity"></activity>
-        <activity android:name=".activities.JobListActivity"></activity>
+        <activity android:name=".activities.CalendarActivity"></activity>
+        <activity android:name=".activities.NotificationActivity" />
+        <activity android:name=".activities.JobDetailActivity" />
+        <activity android:name=".activities.JobListActivity" />
+        <activity android:name=".activities.JobListBySiteActivity" />
         <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.ForgotPasswordActivity" />
         <activity android:name=".activities.LoginActivity" />

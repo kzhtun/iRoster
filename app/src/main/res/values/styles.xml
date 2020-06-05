@@ -24,6 +24,14 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+    </style>
+
 
     <style name="DialogAnimation_Fade">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>

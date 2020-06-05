@@ -9,9 +9,9 @@ import android.util.Log;
 import com.info121.iroster.fragments.ShiftFragment;
 
 
-public class SummaryPageAdapter extends FragmentStatePagerAdapter {
+public class DashboardPageAdapter extends FragmentStatePagerAdapter {
 
-    public SummaryPageAdapter(FragmentManager fm) {
+    public DashboardPageAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -19,8 +19,8 @@ public class SummaryPageAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
 
         switch (position){
-            case 0: return ShiftFragment.newInstance("DAY");
-            case 1: return ShiftFragment.newInstance("NIGHT");
+            case 0: return ShiftFragment.newInstance("0");
+            case 1: return ShiftFragment.newInstance("1");
         }
 
         return null;

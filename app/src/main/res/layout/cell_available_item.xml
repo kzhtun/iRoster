@@ -168,7 +168,7 @@
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:text="1."
+            android:text="2."
             android:textColor="@color/oil"
             android:textSize="9sp" />
 
@@ -186,7 +186,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="John Jordan"
+            android:text="Taufik Batisah"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -213,7 +213,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
 
-            android:text="92871822"
+            android:text="8644332"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -233,7 +233,7 @@
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:text="1."
+            android:text="3."
             android:textColor="@color/oil"
             android:textSize="9sp" />
 
@@ -251,7 +251,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="John Jordan"
+            android:text="Agu Casmir"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -278,7 +278,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
 
-            android:text="92871822"
+            android:text="8654443"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 

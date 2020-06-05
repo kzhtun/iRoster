@@ -12,6 +12,8 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 
+import com.info121.iroster.models.JobDetail;
+
 import java.util.TimeZone;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -41,6 +43,13 @@ public class App extends Application {
     public static String CONST_TIMER_DELAY = "TIMER_DELAY";
     public static String CONST_REMEMBER_ME = "REMEMBER_ME";
 
+    public static String currentShortage = "0";
+    public static String currentDate = "26-May-2020, Tue";
+    public static String currentShift = "";
+    public static String currentCluster = "";
+    public static JobDetail currentJobDetail;
+    public static JobDetail currentSiteInfo;
+    public static Boolean isSiteDetail = false;
 
     public static String lastLogin = "";
     public static String userName = "";

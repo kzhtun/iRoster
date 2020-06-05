@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.Log;
 
+import com.info121.iroster.fragments.AvailableFragment;
 import com.info121.iroster.fragments.AvailableRemarkFragment;
 import com.info121.iroster.fragments.ConfirmFragment;
 import com.info121.iroster.fragments.ShortageFragment;
@@ -13,6 +14,9 @@ import com.info121.iroster.fragments.SiteInfoFragment;
 
 
 public class JobDetailPageAdapter extends FragmentStatePagerAdapter {
+    SiteInfoFragment siteInfoFragment = SiteInfoFragment.newInstance("SITE INFO");
+    AvailableRemarkFragment availableRemarkFragment = AvailableRemarkFragment.newInstance("AVAILABLE");
+    ConfirmFragment confirmFragment = ConfirmFragment.newInstance("CONFIRM");
 
     public JobDetailPageAdapter(FragmentManager fm) {
         super(fm);
@@ -23,8 +27,9 @@ public class JobDetailPageAdapter extends FragmentStatePagerAdapter {
 
         switch (position){
             case 0: return SiteInfoFragment.newInstance("SITE INFO");
-            case 1: return AvailableRemarkFragment.newInstance("AVAILABLE");
-            case 2: return ConfirmFragment.newInstance("CONFIRM");
+            case 1: return ShortageFragment.newInstance("SHORTAGE");
+            case 2: return AvailableFragment.newInstance("AVAILABLE");
+            case 3: return ConfirmFragment.newInstance("CONFIRM");
         }
 
         return null;
@@ -32,7 +37,7 @@ public class JobDetailPageAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Nullable
@@ -40,12 +45,11 @@ public class JobDetailPageAdapter extends FragmentStatePagerAdapter {
     public CharSequence getPageTitle(int position) {
         Log.e("PageTitle", position + "");
 
-
-
         switch (position){
             case 0: return "SITE INFO";
-            case 1: return "AVAILABLE";
-            case 2: return "CONFIRM";
+            case 1: return "SHORTAGE";
+            case 2: return "AVAILABLE";
+            case 3: return "CONFIRM";
             default: return null;
         }
 

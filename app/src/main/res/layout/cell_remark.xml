@@ -40,10 +40,8 @@
             android:layout_gravity="center"
             android:layout_marginRight="3dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_button_green"
-            android:paddingLeft="32dp"
-            android:paddingRight="16dp"
-            android:text="UPDATE"
+            android:background="@drawable/rounded_button_default"
+            android:text="MESSAGE TO GUARD APP"
             android:textColor="@color/white" />
 
         <Button
@@ -52,11 +50,9 @@
             android:layout_height="42dp"
             android:layout_gravity="center"
             android:layout_marginLeft="3dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_button_red"
-            android:paddingLeft="32dp"
-            android:paddingRight="16dp"
-            android:text="CLOSE"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_button_default"
+            android:text="SEND SMS"
             android:textColor="@color/white" />
     </LinearLayout>
 

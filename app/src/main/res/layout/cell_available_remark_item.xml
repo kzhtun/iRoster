@@ -76,7 +76,6 @@
             style="@style/cell_text"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-
             android:text="EMP\nGRADE"
             android:textColor="@color/white"
             android:textSize="7sp" />
@@ -85,7 +84,6 @@
             style="@style/cell_text"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-
             android:text="CONTACT"
             android:textColor="@color/white"
             android:textSize="9sp" />
@@ -93,6 +91,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
             android:scaleX="0.60"
             android:scaleY="0.60"
             />
@@ -155,7 +154,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
 
-            android:text="92871822"
+            android:text="9287182"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -182,7 +181,7 @@
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:text="1."
+            android:text="2."
             android:textColor="@color/oil"
             android:textSize="9sp" />
 
@@ -200,7 +199,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="John Jordan"
+            android:text="Suresh Rajesh"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -227,7 +226,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
 
-            android:text="92871822"
+            android:text="9837483"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -254,7 +253,7 @@
             android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
-            android:text="1."
+            android:text="3."
             android:textColor="@color/oil"
             android:textSize="9sp" />
 
@@ -272,7 +271,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="John Jordan"
+            android:text="Mohd Rafer Jamat"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -299,7 +298,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
 
-            android:text="92871822"
+            android:text="8928382"
             android:textSize="9sp"
             android:textColor="@color/oil" />
 
@@ -311,6 +310,7 @@
             />
 
     </LinearLayout>
+
     <View android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/light"/>

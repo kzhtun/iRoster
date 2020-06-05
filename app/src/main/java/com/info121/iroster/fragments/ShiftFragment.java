@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.info121.iroster.R;
-import com.info121.iroster.adapters.SummaryAdapter;
+import com.info121.iroster.adapters.DashboardAdapter;
 import com.info121.iroster.models.JobSummary;
 
 import java.util.ArrayList;
@@ -23,9 +23,10 @@ import butterknife.ButterKnife;
 
 
 public class ShiftFragment extends Fragment {
-    List<JobSummary> mJobList = new ArrayList<>();
+    List<JobSummary> mDayList = new ArrayList<>();
+    List<JobSummary> mNightList = new ArrayList<>();
 
-    SummaryAdapter summaryAdapter;
+    DashboardAdapter dashboardAdapter;
 
     Context mContext = getActivity();
     String mCurrentTab = "";
@@ -38,6 +39,9 @@ public class ShiftFragment extends Fragment {
 
     @BindView(R.id.pullToRefresh)
     SwipeRefreshLayout mSwipeLayout;
+
+    @BindView(R.id.message)
+    TextView mMessage;
 
     public ShiftFragment() {
         // Required empty public constructor
@@ -69,20 +73,43 @@ public class ShiftFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
-
+        mSwipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mSwipeLayout.setRefreshing(false);
+            }
+        });
 
         //TODO: dummy data
-        mJobList = new ArrayList<>();
+        mDayList = new ArrayList<>();
+        mNightList = new ArrayList<>();
 
-        mJobList.add(new JobSummary("NORTH", "-3"));
-        mJobList.add(new JobSummary("WEST", "+3"));
-        mJobList.add(new JobSummary("EAST", "0"));
-        mJobList.add(new JobSummary("CENTRAL", "-5"));
+        mDayList.add(new JobSummary("DAY", "NORTH", "-2"));
+        mDayList.add(new JobSummary("DAY","WEST", "+3"));
+        mDayList.add(new JobSummary("DAY","EAST", "0"));
+        mDayList.add(new JobSummary("DAY","CENTRAL", "-2"));
+
+
+        mNightList.add(new JobSummary("NIGHT", "NORTH", "-1"));
+        mNightList.add(new JobSummary("NIGHT","WEST", "+1"));
+        mNightList.add(new JobSummary("NIGHT","EAST", "0"));
+        mNightList.add(new JobSummary("NIGHT","CENTRAL", "-3"));
 
         mRecyclerView.setHasFixedSize(false);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false));
-        summaryAdapter = new SummaryAdapter(mContext, mJobList);
-        mRecyclerView.setAdapter(summaryAdapter);
+
+
+
+        if(mCurrentTab == "0"){
+            dashboardAdapter = new DashboardAdapter(mContext, mDayList);
+            mMessage.setText("There are 1 shortages for this day.");
+        }else{
+            dashboardAdapter = new DashboardAdapter(mContext, mNightList);
+            mMessage.setText("There are 3 shortages for this day.");
+        }
+
+        mRecyclerView.setAdapter(dashboardAdapter);
+        mRecyclerView.getAdapter().notifyDataSetChanged();
 
 //        mSwipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
 //            @Override
